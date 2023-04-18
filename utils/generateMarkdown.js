@@ -25,8 +25,8 @@ function generateMarkdown(data) {
   4. [Contributing](#contributing)
   5. [Tests](#tests)
   6. [Questions](#questions)
-  ## Installation
-  In order to install the needed dependencies, run this command:
+
+    ## Installation
   ${data.installation}
   ## Usage
   ${data.usage}
@@ -41,7 +41,5 @@ function generateMarkdown(data) {
   Regarding any questions, contact me directly at [${data.email}](mailto:${data.email}). More of my work: [${data.username}](https://www.github.com/${data.username}).
 `;
 }
-
-module.exports = generateMarkdown;
 
 module.exports = generateMarkdown;
