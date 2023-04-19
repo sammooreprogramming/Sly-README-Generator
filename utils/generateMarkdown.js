@@ -14,7 +14,6 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
   ---
-  ---
   ![${data.license}](https://img.shields.io/badge/license-${data.license}-green)
   ## Description
   ${data.description}
@@ -32,11 +31,12 @@ function generateMarkdown(data) {
   ${data.usage}
   ## License 
   This project is licensed under the ${data.license} license.
+  ## Repository
+  This is the associated Github repository ${data.repo}.
   ## Contributing
   ${data.contribution}
   ## Tests
-  To test the project, run the following command:
-  ${data.tests}
+  To test the project, follow these steps: ${data.tests}.
   ## Questions
   Regarding any questions, contact me directly at [${data.email}](mailto:${data.email}). More of my work: [${data.username}](https://www.github.com/${data.username}).
 `;
