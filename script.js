@@ -96,7 +96,7 @@ function writeToFile(fileName, data) {
         if (error) {
             return console.log(error)
         }
-        console.log('success')
+        console.log('Bleat! Enjoy your bright, shiny new README.md file!')
     });
 }
 
