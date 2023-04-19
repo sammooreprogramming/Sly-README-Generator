@@ -1,14 +1,57 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let dynamicBadge = "";
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+  if(license != "None") {
+    dynamicBadge = "![License Badge](https://shields.io/badge/license-" + license + "-green)";
+  }
+  
+  return dynamicBadge;
+}
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+
+  let linkToLicense;
+
+  // select correct license link for the selected license
+  switch(license) {
+
+    case "MIT":
+      linkToLicense = "https://mit-license.org/";
+      break;
+    case "BSD":
+      linkToLicense = "https://opensource.org/licenses/BSD-3-Clause";
+      break;
+    case "GPL":
+      linkToLicense = "https://www.gnu.org/licenses/gpl-3.0.en.html";
+      break;
+    case "Apache":
+      linkToLicense = "https://www.apache.org/licenses/LICENSE-2.0.html";
+      break;
+    default:
+      linkToLicense = "";
+      break;
+  }
+
+  return linkToLicense;
+}
+
+// Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  let licenseSect = "";
+
+  // if a license has been selected, create License section
+  // with link to license information
+  if (license != "None") {
+    licenseSect += "## License\n"
+    licenseSect += "Please see " + renderlinkToLicense(license) + " to get detailed information for this license\n";
+  }
+
+  return licenseSect;
+}
+
 
 // function to generate markdown for README
 function generateMarkdown(data) {
