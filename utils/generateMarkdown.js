@@ -26,8 +26,8 @@ function generateMarkdown(data) {
   6. [Tests](#tests)
   7. [Questions](#questions)
 
-    ## Installation
-  ${data.installation}
+  ## Installation
+  This is how the project is installed: ${data.installation}.
   ## Usage
   ${data.usage}
   ## License 

@@ -15,6 +15,12 @@ const questions = [
 
     {
         type: "input",
+        name: "installation",
+        message: "How do you install this project?"
+    },
+
+    {
+        type: "input",
         name: "username",
         message: "Enter your Github username, please."
     },
